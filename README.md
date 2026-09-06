@@ -1,0 +1,64 @@
+# Codex Paper Adapter
+
+> A Codex skill that migrates an existing paper to a new official conference template.
+
+[![Codex Skill](https://img.shields.io/badge/Codex-Skill-111111)](https://developers.openai.com/)
+[![LaTeX](https://img.shields.io/badge/LaTeX-008080?logo=latex&logoColor=white)](https://www.latex-project.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+`$codex-paper-adapter` verifies the live official source, rewires the project, and leaves the manuscript unchanged.
+
+| It can | It will not |
+| --- | --- |
+| Reorganize files and update template wiring | Rewrite manuscript prose |
+| Download the verified official template | Use a remembered or unofficial template |
+| Add an empty mandatory structural hook | Invent authors, results, or disclosures |
+
+The project is normalized toward:
+
+```text
+paper/
+├── main.tex
+├── references.bib
+├── sections/
+│   ├── introduction.tex
+│   └── ...
+├── figures/
+└── style_iclr2027/
+    ├── iclr2027_conference.sty
+    └── ...
+```
+
+## Install
+
+Clone this repo directly into your Codex skills folder:
+
+```bash
+mkdir -p ~/.codex/skills
+git clone https://github.com/Wayne2Wang/codex-paper-adapter.git ~/.codex/skills/codex-paper-adapter
+```
+
+Restart Codex if the skill does not appear immediately.
+
+## Example Usage
+
+**User**
+```text
+Use $codex-paper-adapter to migrate this existing Overleaf paper
+from the NeurIPS 2025 template to the official ICLR 2027 review template.
+```
+
+You can also ask for an audit without requesting changes:
+
+```text
+Use $codex-paper-adapter to audit whether this repository conforms
+to the official ICML 2027 submission template. Do not modify any files.
+```
+
+## License
+
+MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+> "Built by Codex. ⭐"
