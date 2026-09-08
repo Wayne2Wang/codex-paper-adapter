@@ -12,7 +12,8 @@
 | --- | --- |
 | Reorganize files and update template wiring | Rewrite manuscript prose |
 | Download the verified official template | Use a remembered or unofficial template |
-| Add an empty mandatory structural hook | Invent authors, results, or disclosures |
+| Keep required author sections active with obvious TODOs | Invent authors, results, or disclosures |
+| Show unused key template components as explained commented lines | Load unnecessary optional components silently |
 
 The project is normalized toward:
 
@@ -28,6 +29,8 @@ paper/
     ├── iclr2027_conference.sty
     └── ...
 ```
+
+The resulting entry point accounts for the official template's key components. Optional components that are not needed remain visible as commented loading lines with an explanation, while mandatory author-supplied sections remain active with a conspicuous TODO until the authors complete them.
 
 ## Install
 
